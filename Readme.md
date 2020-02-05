@@ -1,7 +1,7 @@
 # Личный проект «Шесть городов» [![Build status][travis-image]][travis-url]
 
 * Студент: [Антон Кричевцов](https://up.htmlacademy.ru/react/3/user/285581).
-* Наставник: `Неизвестно`.
+* Наставник: [Александр Тимоновский](https://up.htmlacademy.ru/ecmascript/10/user/768125).
 
 ---
 
