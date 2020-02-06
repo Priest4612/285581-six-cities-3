@@ -1,0 +1,14 @@
+import React from 'react';
+import ReactDom from 'react-dom';
+import App from './components/app/app.jsx';
+
+const Settings = {
+  PLACE_COUNT: 12,
+};
+
+ReactDom.render(
+    <App
+      placeCount={Settings.PLACE_COUNT}
+    />,
+    document.querySelector(`#root`)
+);
