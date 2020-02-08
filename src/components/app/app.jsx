@@ -1,8 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Main from '../main.jsx';
 
 const App = (props) => {
-  // eslint-disable-next-line react/prop-types
   const {placeCount} = props;
 
   return (
@@ -10,6 +10,10 @@ const App = (props) => {
       placeCount = {placeCount}
     />
   );
+};
+
+App.propTypes = {
+  placeCount: PropTypes.number.isRequries,
 };
 
 export default App;
