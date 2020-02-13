@@ -315,6 +315,7 @@ exports[`Render Main Main place Count = 13 1`] = `
                 >
                   <a
                     href="#"
+                    onClick={[Function]}
                   >
                     Beautiful & luxurious apartment at great location
                   </a>
@@ -409,6 +410,7 @@ exports[`Render Main Main place Count = 13 1`] = `
                 >
                   <a
                     href="#"
+                    onClick={[Function]}
                   >
                     Wood and stone place
                   </a>
@@ -503,6 +505,7 @@ exports[`Render Main Main place Count = 13 1`] = `
                 >
                   <a
                     href="#"
+                    onClick={[Function]}
                   >
                     Canal View Prinsengracht
                   </a>
@@ -597,6 +600,7 @@ exports[`Render Main Main place Count = 13 1`] = `
                 >
                   <a
                     href="#"
+                    onClick={[Function]}
                   >
                     Nice, cozy, warm big bed apartment
                   </a>
@@ -691,6 +695,7 @@ exports[`Render Main Main place Count = 13 1`] = `
                 >
                   <a
                     href="#"
+                    onClick={[Function]}
                   >
                     Wood and stone place
                   </a>

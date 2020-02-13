@@ -8,6 +8,7 @@ describe(`Render Main`, () => {
     const tree = renderer
       .create(<Main
         placeCount={13}
+        onRentalTitleClick={() => {}}
       />)
       .toJSON();
 
