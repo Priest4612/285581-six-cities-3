@@ -1,5 +1,0 @@
-const offers = [
-
-];
-
-export {offers};
