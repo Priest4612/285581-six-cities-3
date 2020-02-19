@@ -7,16 +7,37 @@ Enzyme.configure({
   adapter: new Adapter(),
 });
 
-const offersCount = 17;
+const offers = [
+  {
+    id: 13,
+    isPremium: true,
+    picture: `apartment-01.jpg`,
+    price: 129,
+    isBookmark: false,
+    rating: 4,
+    name: `apartment-01`,
+    type: `Apartment`,
+  }, {
+
+    id: 23,
+    isPremium: false,
+    picture: `room.jpg`,
+    price: 88,
+    isBookmark: true,
+    rating: 3,
+    name: `room`,
+    type: `Private room`,
+  }
+];
 
 describe(`Tect title rental`, () => {
   it(`Should rental title be pressed`, () => {
-    const onRentalTitleClick = jest.fn();
+    const handleRentalHeaderClick = jest.fn();
 
     const mainElement = shallow(
         <Main
-          offersCount={offersCount}
-          onRentalTitleClick={onRentalTitleClick}
+          offers={offers}
+          handleRentalHeaderClick={handleRentalHeaderClick}
         />
     );
 
@@ -26,6 +47,6 @@ describe(`Tect title rental`, () => {
       item.props().onClick();
     });
 
-    expect(onRentalTitleClick.mock.calls.length).toBe(RentalTitleLinks.length);
+    expect(handleRentalHeaderClick.mock.calls.length).toBe(RentalTitleLinks.length);
   });
 });
