@@ -1,17 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const PlaceCard = (props) => {
-  const {/* id,  */isPremium, picture, price, isBookmark, rating, name, type} = props.offers;
-  const {handleRentalHeaderClick} = props.handleRentalHeaderClick;
-
+const OfferCard = (props) => {
+  const {offer, handleRentalHeaderClick, onOfferCardMouseEnter} = props;
+  const {/* id,  */isPremium, picture, price, isBookmark, rating, name, type} = offer;
 
   return (
-    <article className="cities__place-card place-card">
+    <article className="cities__place-card place-card" onOfferCardMouseEnter={onOfferCardMouseEnter}>
       {isPremium ? <div className="place-card__mark"><span>Premium</span></div> : ``}
       <div className="cities__image-wrapper place-card__image-wrapper">
         <a href="#">
-          <img className="place-card__image" src={`img/` + {picture}} width="260" height="200" alt="Place image"/>
+          <img className="place-card__image" src={`img/${picture}`} width="260" height="200" alt="Place image"/>
         </a>
       </div>
       <div className="place-card__info">
@@ -56,9 +55,9 @@ const PlaceCard = (props) => {
   );
 };
 
-PlaceCard.propTypes = {
-  offers: PropTypes.shape({
-    /* id: PropTypes.number.isRequired, */
+OfferCard.propTypes = {
+  offer: PropTypes.shape({
+    id: PropTypes.number.isRequired,
     isPremium: PropTypes.bool.isRequired,
     picture: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
@@ -68,6 +67,7 @@ PlaceCard.propTypes = {
     type: PropTypes.string.isRequired,
   }).isRequired,
   handleRentalHeaderClick: PropTypes.func.isRequired,
+  onOfferCardMouseEnter: PropTypes.func.isRequired,
 };
 
-export default PlaceCard;
+export default OfferCard;

@@ -2,21 +2,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Main from '../main/main.jsx';
 
-const rentalTitleHandler = () => {};
+const handleRentalHeaderClick = () => {};
 
 const App = (props) => {
-  const {placeCount} = props;
+  const {offers} = props;
 
   return (
     <Main
-      placeCount={placeCount}
-      onRentalTitleClick={rentalTitleHandler}
+      offers={offers}
+      handleRentalHeaderClick={handleRentalHeaderClick}
     />
   );
 };
 
 App.propTypes = {
-  placeCount: PropTypes.number.isRequired,
+  offers: PropTypes.array.isRequired,
 };
 
 export default App;

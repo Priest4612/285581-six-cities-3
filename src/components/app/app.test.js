@@ -7,7 +7,7 @@ describe(`Render App`, () => {
   it(`App place Count = 13`, () => {
     const tree = renderer
       .create(<App
-        placeCount={13}
+        offersCount={13}
       />)
       .toJSON();
 

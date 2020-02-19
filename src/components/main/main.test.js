@@ -7,7 +7,7 @@ describe(`Render Main`, () => {
   it(`Main place Count = 13`, () => {
     const tree = renderer
       .create(<Main
-        placeCount={13}
+        offersCount={13}
         onRentalTitleClick={() => {}}
       />)
       .toJSON();

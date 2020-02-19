@@ -15,7 +15,7 @@ describe(`Tect title rental`, () => {
 
     const mainElement = shallow(
         <Main
-          placeCount={offersCount}
+          offersCount={offersCount}
           onRentalTitleClick={onRentalTitleClick}
         />
     );
