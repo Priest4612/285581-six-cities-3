@@ -1,16 +1,17 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import App from '../app/app.jsx';
+
+import OffersList from './offers-list.jsx';
 
 const offers = [
   {
     id: 101,
     isPremium: true,
-    picture: `apartment-01.jpg`,
+    picture: `apartment.jpg`,
     price: 129,
     isBookmark: false,
     rating: 4,
-    name: `apartment-01`,
+    name: `apartment`,
     type: `Apartment`,
   }, {
 
@@ -24,13 +25,13 @@ const offers = [
     type: `Private room`,
   }, {
 
-    id: 333,
+    id: 311,
     isPremium: false,
     picture: `apartment-03.jpg`,
     price: 218,
     isBookmark: false,
-    rating: 4.5,
-    name: `apartment-03`,
+    rating: 5,
+    name: `apartment-13`,
     type: `Apartment`,
   }, {
 
@@ -45,11 +46,14 @@ const offers = [
   }
 ];
 
-describe(`Render App`, () => {
-  it(`App place Count = 13`, () => {
+describe(`Checked OffersList`, () => {
+  it(`Render OffersList`, () => {
     const tree = renderer
-      .create(<App
+      .create(<OffersList
         offers={offers}
+        handleRentalHeaderClick={() => {}}
+        onOfferMouseEnter={() => {}}
+        onOfferMouseLeave={() => {}}
       />)
       .toJSON();
 

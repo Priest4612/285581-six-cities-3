@@ -165,7 +165,7 @@ exports[`Render App App place Count = 13 1`] = `
             className="places__found"
           >
              
-            13
+            4
              places to stay in Amsterdam
           </b>
           <form
@@ -227,6 +227,8 @@ exports[`Render App App place Count = 13 1`] = `
           >
             <article
               className="cities__place-card place-card"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
             >
               <div
                 className="place-card__mark"
@@ -262,7 +264,8 @@ exports[`Render App App place Count = 13 1`] = `
                     <b
                       className="place-card__price-value"
                     >
-                      €120
+                      €
+                      129
                     </b>
                     <span
                       className="place-card__price-text"
@@ -317,7 +320,7 @@ exports[`Render App App place Count = 13 1`] = `
                     href="#"
                     onClick={[Function]}
                   >
-                    Beautiful & luxurious apartment at great location
+                    apartment-01
                   </a>
                 </h2>
                 <p
@@ -329,7 +332,10 @@ exports[`Render App App place Count = 13 1`] = `
             </article>
             <article
               className="cities__place-card place-card"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
             >
+              
               <div
                 className="cities__image-wrapper place-card__image-wrapper"
               >
@@ -357,7 +363,8 @@ exports[`Render App App place Count = 13 1`] = `
                     <b
                       className="place-card__price-value"
                     >
-                      €80
+                      €
+                      88
                     </b>
                     <span
                       className="place-card__price-text"
@@ -394,7 +401,7 @@ exports[`Render App App place Count = 13 1`] = `
                     <span
                       style={
                         Object {
-                          "width": "80%",
+                          "width": "60%",
                         }
                       }
                     />
@@ -412,7 +419,7 @@ exports[`Render App App place Count = 13 1`] = `
                     href="#"
                     onClick={[Function]}
                   >
-                    Wood and stone place
+                    room
                   </a>
                 </h2>
                 <p
@@ -424,109 +431,10 @@ exports[`Render App App place Count = 13 1`] = `
             </article>
             <article
               className="cities__place-card place-card"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
             >
-              <div
-                className="cities__image-wrapper place-card__image-wrapper"
-              >
-                <a
-                  href="#"
-                >
-                  <img
-                    alt="Place image"
-                    className="place-card__image"
-                    height="200"
-                    src="img/apartment-02.jpg"
-                    width="260"
-                  />
-                </a>
-              </div>
-              <div
-                className="place-card__info"
-              >
-                <div
-                  className="place-card__price-wrapper"
-                >
-                  <div
-                    className="place-card__price"
-                  >
-                    <b
-                      className="place-card__price-value"
-                    >
-                      €132
-                    </b>
-                    <span
-                      className="place-card__price-text"
-                    >
-                      / night
-                    </span>
-                  </div>
-                  <button
-                    className="place-card__bookmark-button button"
-                    type="button"
-                  >
-                    <svg
-                      className="place-card__bookmark-icon"
-                      height="19"
-                      width="18"
-                    >
-                      <use
-                        xlinkHref="#icon-bookmark"
-                      />
-                    </svg>
-                    <span
-                      className="visually-hidden"
-                    >
-                      To bookmarks
-                    </span>
-                  </button>
-                </div>
-                <div
-                  className="place-card__rating rating"
-                >
-                  <div
-                    className="place-card__stars rating__stars"
-                  >
-                    <span
-                      style={
-                        Object {
-                          "width": "80%",
-                        }
-                      }
-                    />
-                    <span
-                      className="visually-hidden"
-                    >
-                      Rating
-                    </span>
-                  </div>
-                </div>
-                <h2
-                  className="place-card__name"
-                >
-                  <a
-                    href="#"
-                    onClick={[Function]}
-                  >
-                    Canal View Prinsengracht
-                  </a>
-                </h2>
-                <p
-                  className="place-card__type"
-                >
-                  Apartment
-                </p>
-              </div>
-            </article>
-            <article
-              className="cities__place-card place-card"
-            >
-              <div
-                className="place-card__mark"
-              >
-                <span>
-                  Premium
-                </span>
-              </div>
+              
               <div
                 className="cities__image-wrapper place-card__image-wrapper"
               >
@@ -554,7 +462,8 @@ exports[`Render App App place Count = 13 1`] = `
                     <b
                       className="place-card__price-value"
                     >
-                      €180
+                      €
+                      218
                     </b>
                     <span
                       className="place-card__price-text"
@@ -589,6 +498,13 @@ exports[`Render App App place Count = 13 1`] = `
                     className="place-card__stars rating__stars"
                   >
                     <span
+                      style={
+                        Object {
+                          "width": "90%",
+                        }
+                      }
+                    />
+                    <span
                       className="visually-hidden"
                     >
                       Rating
@@ -602,7 +518,7 @@ exports[`Render App App place Count = 13 1`] = `
                     href="#"
                     onClick={[Function]}
                   >
-                    Nice, cozy, warm big bed apartment
+                    apartment-03
                   </a>
                 </h2>
                 <p
@@ -614,7 +530,10 @@ exports[`Render App App place Count = 13 1`] = `
             </article>
             <article
               className="cities__place-card place-card"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
             >
+              
               <div
                 className="cities__image-wrapper place-card__image-wrapper"
               >
@@ -625,7 +544,7 @@ exports[`Render App App place Count = 13 1`] = `
                     alt="Place image"
                     className="place-card__image"
                     height="200"
-                    src="img/room.jpg"
+                    src="img/apartment-02.jpg"
                     width="260"
                   />
                 </a>
@@ -642,7 +561,8 @@ exports[`Render App App place Count = 13 1`] = `
                     <b
                       className="place-card__price-value"
                     >
-                      €80
+                      €
+                      132
                     </b>
                     <span
                       className="place-card__price-text"
@@ -660,7 +580,7 @@ exports[`Render App App place Count = 13 1`] = `
                       width="18"
                     >
                       <use
-                        xlinkHref="#icon-bookmark-active"
+                        xlinkHref="#icon-bookmark"
                       />
                     </svg>
                     <span
@@ -679,7 +599,7 @@ exports[`Render App App place Count = 13 1`] = `
                     <span
                       style={
                         Object {
-                          "width": "80%",
+                          "width": "76%",
                         }
                       }
                     />
@@ -697,13 +617,13 @@ exports[`Render App App place Count = 13 1`] = `
                     href="#"
                     onClick={[Function]}
                   >
-                    Wood and stone place
+                    apartment-02
                   </a>
                 </h2>
                 <p
                   className="place-card__type"
                 >
-                  Private room
+                  Apartment
                 </p>
               </div>
             </article>

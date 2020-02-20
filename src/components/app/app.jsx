@@ -1,22 +1,33 @@
-import React from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
+
 import Main from '../main/main.jsx';
 
-const rentalTitleHandler = () => {};
 
-const App = (props) => {
-  const {placeCount} = props;
+class App extends PureComponent {
+  constructor(props) {
+    super(props);
+  }
 
-  return (
-    <Main
-      placeCount={placeCount}
-      onRentalTitleClick={rentalTitleHandler}
-    />
-  );
-};
+  render() {
+    const {offers} = this.props;
+
+    return (
+      <Main
+        offers={offers}
+        handleRentalHeaderClick={this._handleRentalHeaderClick}
+      />
+    );
+  }
+
+  _handleRentalHeaderClick(/* id */) {
+    return/*  id */;
+  }
+}
+
 
 App.propTypes = {
-  placeCount: PropTypes.number.isRequired,
+  offers: PropTypes.array.isRequired,
 };
 
 export default App;
