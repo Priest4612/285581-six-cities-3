@@ -33,9 +33,9 @@ class App extends PureComponent {
             {this._renderApp(offers)}
           </Route>
           <Route exact path='/dev-component'>
-            {<OfferDetails
+            <OfferDetails
               offer={offers[0]}
-            />}
+            />
           </Route>
         </Switch>
       </BrowserRouter>
