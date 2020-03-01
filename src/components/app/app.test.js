@@ -2,6 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 
 import App from '../app/app.jsx';
+import createMapBlock from '../map/create-map-block.js';
 
 const offers = [
   {
@@ -159,6 +160,8 @@ const offers = [
 
 describe(`Render App`, () => {
   it(`<App /> sould be render`, () => {
+
+    createMapBlock();
     const tree = renderer
       .create(<App
         offers={offers}

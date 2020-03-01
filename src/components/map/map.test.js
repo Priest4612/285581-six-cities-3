@@ -2,6 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 
 import Map from './map.jsx';
+import createMapBlock from './create-map-block.js';
 
 
 const offers = [
@@ -124,13 +125,11 @@ const offers = [
 
 describe(`Render Map`, () => {
   it(`<Map /> sould be render`, () => {
+    createMapBlock();
     const tree = renderer.create(<Map
       offerCords={offers}
-    />, {
-      createNodeMock: () => {
-        return {};
-      }
-    }).toJSON();
+    />)
+    .toJSON();
 
     expect(tree).toMatchSnapshot();
   });
