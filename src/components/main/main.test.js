@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 
 import Main from '../main/main.jsx';
-import createMapBlock from '../map/create-map-block.js';
+/* import createMapBlock from '../map/create-map-block.js'; */
 
 const offers = [
   {
@@ -160,12 +160,14 @@ const offers = [
 
 describe(`Render Main`, () => {
   it(`Main render`, () => {
-    createMapBlock();
+    /* createMapBlock(); */
     const tree = renderer
       .create(<Main
         offers={offers}
         handleRentalHeaderClick={() => {}}
-      />)
+      />, {
+        createNodeMock: () => document.createElement(`div`)
+      })
       .toJSON();
 
     expect(tree).toMatchSnapshot();
