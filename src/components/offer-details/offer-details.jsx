@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import ReviewsList from '../reviews-list/reviews-list.jsx';
 import reviews from '../../mock/reviews.js';
 import NearPlacesList from '../near-places-list/near-places-list.jsx';
+import Map from '../map/map.jsx';
 
 class OfferDetails extends PureComponent {
   constructor(props) {
@@ -12,6 +13,7 @@ class OfferDetails extends PureComponent {
 
   render() {
     const {activeOfferId, offers} = this.props;
+    const nearPlaces = offers.filter((item) => item.id !== activeOfferId).slice(0, 3);
     const offer = offers.filter((item) => item.id === activeOfferId);
 
     const {
@@ -161,13 +163,17 @@ class OfferDetails extends PureComponent {
               </section>
             </div>
           </div>
-          <section className="property__map map"></section>
+          <section className="property__map map">
+            <Map
+              offerCords={nearPlaces}
+            />
+          </section>
         </section>
         <div className="container">
           <section className="near-places places">
 
             <NearPlacesList
-              places={offers.filter((item) => item.id !== activeOfferId).slice(0, 3)}
+              places={nearPlaces}
             />
 
           </section>

@@ -84,7 +84,9 @@ describe(`Checked OfferDetails`, () => {
       .create(<OfferDetails
         activeOfferId={activeOfferId}
         offers={offers}
-      />)
+      />, {
+        createNodeMock: () => document.createElement(`div`)
+      })
       .toJSON();
 
     expect(tree).toMatchSnapshot();

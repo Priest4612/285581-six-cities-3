@@ -438,7 +438,17 @@ exports[`Checked OfferDetails Render OfferDetails 1`] = `
     </div>
     <section
       className="property__map map"
-    />
+    >
+      <div
+        id="map"
+        style={
+          Object {
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      />
+    </section>
   </section>
   <div
     className="container"
