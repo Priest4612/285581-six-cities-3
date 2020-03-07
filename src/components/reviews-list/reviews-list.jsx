@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import ReviewItem from '../review-item/review-item';
+import ReviewItem from '../review-item/review-item.jsx';
 
 const ReviewsList = (props) => {
   const {reviews} = props;

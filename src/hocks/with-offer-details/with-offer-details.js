@@ -1,5 +1,5 @@
 import React, {PureComponent} from 'react';
-import OfferDetails from '../../offer-details/offer-details.jsx';
+import OfferDetails from '../../components/offer-details/offer-details.jsx';
 
 const withOfferDetails = (Component) => {
   class WithOfferDetails extends PureComponent {
