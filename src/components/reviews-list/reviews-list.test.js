@@ -30,8 +30,8 @@ const reviews = [{
   idOffer: 202,
 }];
 
-describe(`Checked OfferDetails`, () => {
-  it(`Render OfferDetails`, () => {
+describe(`Checked ReviewsList`, () => {
+  it(`Render ReviewsList`, () => {
     const tree = renderer
       .create(<ReviewsList
         reviews={reviews}

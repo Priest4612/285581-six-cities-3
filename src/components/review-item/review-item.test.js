@@ -15,8 +15,8 @@ const review = {
 };
 
 
-describe(`Checked OfferDetails`, () => {
-  it(`Render OfferDetails`, () => {
+describe(`Checked ReviewItem`, () => {
+  it(`Render ReviewItem`, () => {
     const tree = renderer
       .create(<ReviewItem
         review={review}

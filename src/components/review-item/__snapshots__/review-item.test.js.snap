@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Checked OfferDetails Render OfferDetails 1`] = `
+exports[`Checked ReviewItem Render ReviewItem 1`] = `
 <li
   className="reviews__item"
 >
