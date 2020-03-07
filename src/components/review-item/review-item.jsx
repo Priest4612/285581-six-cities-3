@@ -23,7 +23,7 @@ const ReviewItem = (props) => {
         <div className="reviews__rating rating">
           <div className="reviews__stars rating__stars">
             <span style={{width: (rating * 100 / 5) + `%`}}></span>
-            <span className="visually-hidden">{rating}</span>
+            <span className="visually-hidden">Rating</span>
           </div>
         </div>
         <p className="reviews__text">

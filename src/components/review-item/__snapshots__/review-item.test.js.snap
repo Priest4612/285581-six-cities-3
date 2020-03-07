@@ -43,7 +43,7 @@ exports[`Checked OfferDetails Render OfferDetails 1`] = `
         <span
           className="visually-hidden"
         >
-          3.8
+          Rating
         </span>
       </div>
     </div>
