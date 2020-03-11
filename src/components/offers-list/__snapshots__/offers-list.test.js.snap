@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Checked OffersList Render OffersList 1`] = `
-<div
-  className="cities__places-list places__list tabs__content"
->
+Array [
   <article
     className="cities__place-card place-card"
     onMouseEnter={[Function]}
@@ -53,7 +51,7 @@ exports[`Checked OffersList Render OffersList 1`] = `
           </span>
         </div>
         <button
-          className="place-card__bookmark-button button"
+          className="place-card__bookmark-button place-card__bookmark-buttonfalse button"
           type="button"
         >
           <svg
@@ -108,13 +106,12 @@ exports[`Checked OffersList Render OffersList 1`] = `
         Apartment
       </p>
     </div>
-  </article>
+  </article>,
   <article
     className="cities__place-card place-card"
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
-    
     <div
       className="cities__image-wrapper place-card__image-wrapper"
     >
@@ -207,13 +204,12 @@ exports[`Checked OffersList Render OffersList 1`] = `
         Private room
       </p>
     </div>
-  </article>
+  </article>,
   <article
     className="cities__place-card place-card"
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
-    
     <div
       className="cities__image-wrapper place-card__image-wrapper"
     >
@@ -251,7 +247,7 @@ exports[`Checked OffersList Render OffersList 1`] = `
           </span>
         </div>
         <button
-          className="place-card__bookmark-button button"
+          className="place-card__bookmark-button place-card__bookmark-buttonfalse button"
           type="button"
         >
           <svg
@@ -306,13 +302,12 @@ exports[`Checked OffersList Render OffersList 1`] = `
         Apartment
       </p>
     </div>
-  </article>
+  </article>,
   <article
     className="cities__place-card place-card"
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
-    
     <div
       className="cities__image-wrapper place-card__image-wrapper"
     >
@@ -405,6 +400,6 @@ exports[`Checked OffersList Render OffersList 1`] = `
         Apartment
       </p>
     </div>
-  </article>
-</div>
+  </article>,
+]
 `;

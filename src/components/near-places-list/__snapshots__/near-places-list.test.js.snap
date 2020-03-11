@@ -11,10 +11,12 @@ Array [
     className="near-places__list places__list"
   >
     <article
-      className="near-places__card place-card"
+      className="near__place-card place-card"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
     >
       <div
-        className="near-places__image-wrapper place-card__image-wrapper"
+        className="near__image-wrapper place-card__image-wrapper"
       >
         <a
           href="#"
@@ -94,6 +96,7 @@ Array [
         >
           <a
             href="#"
+            onClick={[Function]}
           >
             Wood and stone place
           </a>
@@ -106,10 +109,12 @@ Array [
       </div>
     </article>
     <article
-      className="near-places__card place-card"
+      className="near__place-card place-card"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
     >
       <div
-        className="near-places__image-wrapper place-card__image-wrapper"
+        className="near__image-wrapper place-card__image-wrapper"
       >
         <a
           href="#"
@@ -189,6 +194,7 @@ Array [
         >
           <a
             href="#"
+            onClick={[Function]}
           >
             Canal View Prinsengracht
           </a>

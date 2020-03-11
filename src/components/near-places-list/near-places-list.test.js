@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 
 import NearPlacesList from './near-places-list.jsx';
 
-const places = [{
+const nearPlaces = [{
   id: 212,
   isPremium: false,
   picture: `room-01.jpg`,
@@ -81,7 +81,8 @@ describe(`Checked NearPlacesList`, () => {
   it(`Render NearPlacesList`, () => {
     const tree = renderer
       .create(<NearPlacesList
-        places={places}
+        offers={nearPlaces}
+        handleRentalHeaderClick={() => {}}
       />)
       .toJSON();
 

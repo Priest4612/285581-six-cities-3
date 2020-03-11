@@ -14,11 +14,14 @@ const offer = {
   type: `Apartment`,
 };
 
+const CLS_NAME = `cities`;
+
 describe(`Checked OfferCard`, () => {
   it(`Render OfferCard`, () => {
     const tree = renderer
       .create(<OfferCard
         key={offer.id}
+        clsName={CLS_NAME}
         offer={offer}
         handleRentalHeaderClick={() => {}}
         onOfferMouseEnter={() => {}}

@@ -84,6 +84,7 @@ describe(`Checked OfferDetails`, () => {
       .create(<OfferDetails
         activeOfferId={activeOfferId}
         offers={offers}
+        handleRentalHeaderClick={() => {}}
       />, {
         createNodeMock: () => document.createElement(`div`)
       })

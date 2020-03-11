@@ -19,6 +19,8 @@ const offer = {
   type: `Private room`,
 };
 
+const CLS_NAME = `cities`;
+
 
 describe(`Checked handler`, () => {
   it(`On offer card mouse enter`, () => {
@@ -27,6 +29,7 @@ describe(`Checked handler`, () => {
     const offerCard = shallow(
         <OfferCard
           key={offer.id}
+          clsName={CLS_NAME}
           offer={offer}
           handleRentalHeaderClick={() => {}}
           onOfferMouseEnter={onOfferMouseLeave}
@@ -46,6 +49,7 @@ describe(`Checked handler`, () => {
     const offerCard = shallow(
         <OfferCard
           key={offer.id}
+          clsName={CLS_NAME}
           offer={offer}
           handleRentalHeaderClick={handleRentalHeaderClick}
           onOfferMouseEnter={() => {}}

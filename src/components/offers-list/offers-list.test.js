@@ -46,10 +46,13 @@ const offers = [
   }
 ];
 
+const CLS_NAME = `cities`;
+
 describe(`Checked OffersList`, () => {
   it(`Render OffersList`, () => {
     const tree = renderer
       .create(<OffersList
+        clsName={CLS_NAME}
         offers={offers}
         handleRentalHeaderClick={() => {}}
         onOfferMouseEnter={() => {}}
