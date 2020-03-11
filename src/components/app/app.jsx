@@ -36,6 +36,7 @@ class App extends PureComponent {
             <OfferDetails
               activeOfferId={offers[0].id}
               offers={offers}
+              handleRentalHeaderClick={this._handleRentalHeaderClick}
             />
           </Route>
         </Switch>
@@ -57,6 +58,7 @@ class App extends PureComponent {
           <OfferDetails
             activeOfferId={this.state.activeOfferId}
             offers={offers}
+            handleRentalHeaderClick={this._handleRentalHeaderClick}
           />
         );
     }

@@ -12,6 +12,7 @@ class Main extends PureComponent {
 
   render() {
     const {offers, handleRentalHeaderClick} = this.props;
+    const CLS_NAME = `cities`;
 
     return (
       <div className="page page--gray page--main">
@@ -105,10 +106,13 @@ class Main extends PureComponent {
                   --> */}
                 </form>
 
-                {<OffersList
-                  offers={offers}
-                  handleRentalHeaderClick={handleRentalHeaderClick}
-                />}
+                <div className="cities__places-list places__list tabs__content">
+                  {<OffersList
+                    clsName={CLS_NAME}
+                    offers={offers}
+                    handleRentalHeaderClick={handleRentalHeaderClick}
+                  />}
+                </div>
 
               </section>
               <div className="cities__right-section">

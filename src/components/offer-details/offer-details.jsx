@@ -12,7 +12,7 @@ class OfferDetails extends PureComponent {
   }
 
   render() {
-    const {activeOfferId, offers} = this.props;
+    const {activeOfferId, offers, handleRentalHeaderClick} = this.props;
     const nearPlaces = offers.filter((item) => item.id !== activeOfferId).slice(0, 3);
     const offer = offers.filter((item) => item.id === activeOfferId);
 
@@ -173,7 +173,8 @@ class OfferDetails extends PureComponent {
           <section className="near-places places">
 
             <NearPlacesList
-              places={nearPlaces}
+              offers={nearPlaces}
+              handleRentalHeaderClick={handleRentalHeaderClick}
             />
 
           </section>
@@ -234,7 +235,8 @@ OfferDetails.propTypes = {
     hostAvatar: PropTypes.string.isRequired,
     hostStatus: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
-  })).isRequired
+  })).isRequired,
+  handleRentalHeaderClick: PropTypes.func.isRequired,
 };
 
 export default OfferDetails;

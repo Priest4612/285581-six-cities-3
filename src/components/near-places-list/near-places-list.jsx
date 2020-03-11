@@ -1,22 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import NearPlaceItem from '../near-place-item/near-place-item.jsx';
+import OffersList from '../offers-list/offers-list.jsx';
 
 
 const NearPlacesList = (props) => {
-  const {places} = props;
+  const {offers, handleRentalHeaderClick} = props;
+  const CLS_NAME = `near`;
 
   return (
     <React.Fragment>
       <h2 className="near-places__title">Other places in the neighbourhood</h2>
       <div className="near-places__list places__list">
-        {places.map((place, i) =>
-          <NearPlaceItem
-            key={`place-${i}`}
-            place={place}
-          />
-        )}
+        <OffersList
+          clsName={CLS_NAME}
+          offers={offers}
+          handleRentalHeaderClick={handleRentalHeaderClick}
+        />
       </div>
     </React.Fragment>
   );
@@ -24,7 +24,19 @@ const NearPlacesList = (props) => {
 
 
 NearPlacesList.propTypes = {
-  places: PropTypes.array.isRequired,
+  offers: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        isPremium: PropTypes.bool.isRequired,
+        picture: PropTypes.string.isRequired,
+        price: PropTypes.number.isRequired,
+        isBookmark: PropTypes.bool.isRequired,
+        rating: PropTypes.number.isRequired,
+        name: PropTypes.string.isRequired,
+        type: PropTypes.string.isRequired,
+      })
+  ).isRequired,
+  handleRentalHeaderClick: PropTypes.func.isRequired,
 };
 
 
