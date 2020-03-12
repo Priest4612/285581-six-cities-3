@@ -9,7 +9,7 @@ class OffersList extends PureComponent {
     super(props);
 
     this.state = {
-      activeOfferCard: null,
+      activeOfferCardId: null,
     };
 
     this._setActiveOfferCard = this._setActiveOfferCard.bind(this);
@@ -17,36 +17,38 @@ class OffersList extends PureComponent {
   }
 
   render() {
-    const {offers, handleRentalHeaderClick} = this.props;
+    const {clsName, offers, handleRentalHeaderClick} = this.props;
 
     return (
-      <div className="cities__places-list places__list tabs__content">
-        {offers.map((offer) => <OfferCard
-          key={offer.id}
+      <React.Fragment>
+        {offers.map((offer, i) => <OfferCard
+          key={`offer-${i}`}
+          clsName={clsName}
           offer={offer}
           handleRentalHeaderClick={handleRentalHeaderClick}
           onOfferMouseEnter={this._setActiveOfferCard}
           onOfferMouseLeave={this._removeActiveOfferCard}
         />)}
-      </div>
+      </React.Fragment>
     );
   }
 
   _setActiveOfferCard(offer) {
     this.setState({
-      activeOfferCard: offer,
+      activeOfferCardId: offer.id,
     });
   }
 
   _removeActiveOfferCard() {
     this.setState({
-      activeOfferCard: null,
+      activeOfferCardId: null,
     });
   }
 }
 
 
 OffersList.propTypes = {
+  clsName: PropTypes.string.isRequired,
   offers: PropTypes.arrayOf(
       PropTypes.shape({
         id: PropTypes.number.isRequired,

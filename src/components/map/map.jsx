@@ -20,20 +20,23 @@ class Map extends PureComponent {
 
   render() {
     return (
-      <div id="map" style={{height: `100%`, width: `100%`}} /* ref={this.mapRef} */></div>
+      <div
+        id="map"
+        style={{height: `100%`, width: `100%`}}
+        ref={this._mapRef}
+      ></div>
     );
   }
 
   componentDidMount() {
     const {offerCords} = this.props;
 
-    const map = leaflet.map(`map`, {
+    const map = leaflet.map(this._mapRef.current, {
       center: this._Map.CITY,
       zoom: this._Map.ZOOM,
       zoomControl: false,
       marker: true,
     });
-
     map.setView(this._Map.CITY, this._Map.ZOOM);
 
     leaflet

@@ -1,10 +1,9 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import OfferDetails from '../offer-details/offer-details.jsx';
+import NearPlacesList from './near-places-list.jsx';
 
-const activeOfferId = 212;
-const offers = [{
+const nearPlaces = [{
   id: 212,
   isPremium: false,
   picture: `room-01.jpg`,
@@ -78,16 +77,13 @@ const offers = [{
   coordinates: [52.3809553943508, 4.939309666406198],
 }];
 
-describe(`Checked OfferDetails`, () => {
-  it(`Render OfferDetails`, () => {
+describe(`Checked NearPlacesList`, () => {
+  it(`Render NearPlacesList`, () => {
     const tree = renderer
-      .create(<OfferDetails
-        activeOfferId={activeOfferId}
-        offers={offers}
+      .create(<NearPlacesList
+        offers={nearPlaces}
         handleRentalHeaderClick={() => {}}
-      />, {
-        createNodeMock: () => document.createElement(`div`)
-      })
+      />)
       .toJSON();
 
     expect(tree).toMatchSnapshot();

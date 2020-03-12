@@ -17,7 +17,7 @@ class App extends PureComponent {
 
     this.state = {
       viewMode: ViewMode.MAIN,
-      activeOffer: null,
+      activeOfferId: null,
     };
 
     this._handleRentalHeaderClick = this._handleRentalHeaderClick.bind(this);
@@ -34,7 +34,9 @@ class App extends PureComponent {
           </Route>
           <Route exact path='/dev-component'>
             <OfferDetails
-              offer={offers[0]}
+              activeOfferId={offers[0].id}
+              offers={offers}
+              handleRentalHeaderClick={this._handleRentalHeaderClick}
             />
           </Route>
         </Switch>
@@ -54,7 +56,9 @@ class App extends PureComponent {
       case ViewMode.DETAIL:
         return (
           <OfferDetails
-            offer={this.state.activeOffer[0]}
+            activeOfferId={this.state.activeOfferId}
+            offers={offers}
+            handleRentalHeaderClick={this._handleRentalHeaderClick}
           />
         );
     }
@@ -64,7 +68,7 @@ class App extends PureComponent {
   _handleRentalHeaderClick(id) {
     this.setState({
       viewMode: ViewMode.DETAIL,
-      activeOffer: this.props.offers.filter((offer) => offer.id === id),
+      activeOfferId: id,
     });
   }
 }
