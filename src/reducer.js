@@ -36,6 +36,8 @@ const reducer = (state = initialState, action) => {
         offers: action.payload,
       });
   }
+
+  return state;
 };
 
 export {reducer, ActionCreator};
