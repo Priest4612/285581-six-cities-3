@@ -24,13 +24,13 @@ class App extends PureComponent {
   }
 
   render() {
-    const {offers} = this.props;
+    const {offers, cities} = this.props;
 
     return (
       <BrowserRouter>
         <Switch>
           <Route exact path='/'>
-            {this._renderApp(offers)}
+            {this._renderApp(offers, cities)}
           </Route>
           <Route exact path='/dev-component'>
             <OfferDetails
@@ -44,12 +44,13 @@ class App extends PureComponent {
     );
   }
 
-  _renderApp(offers) {
+  _renderApp(offers, cities) {
     switch (this.state.viewMode) {
       case ViewMode.MAIN:
         return (
           <Main
             offers={offers}
+            cities={cities}
             handleRentalHeaderClick={this._handleRentalHeaderClick}
           />
         );
@@ -76,6 +77,7 @@ class App extends PureComponent {
 
 App.propTypes = {
   offers: PropTypes.array.isRequired,
+  cities: PropTypes.array.isRequired,
 };
 
 export default App;
