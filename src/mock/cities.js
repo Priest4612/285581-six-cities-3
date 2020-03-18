@@ -1,7 +1,7 @@
 export default [
   {
-    name: `Amsterdam`,
-    coordinates: [52.38333, 4.9],
+    name: `Paris`,
+    coordinates: [48.856663, 2.351556],
   },
   {
     name: `Cologne`,
@@ -12,11 +12,14 @@ export default [
     coordinates: [50.851309, 4.351718],
   },
   {
-    name: `Paris`,
-    coordinates: [48.856663, 2.351556],
+    name: `Amsterdam`,
+    coordinates: [52.38333, 4.9],
   },
   {
     name: `Hamburg`,
     coordinates: [53.552645, 9.966287],
+  }, {
+    name: `Hamburg`,
+    coordinates: [51.230569, 6.787428],
   },
 ];

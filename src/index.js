@@ -4,7 +4,10 @@ import {createStore} from 'redux';
 import {Provider} from 'react-redux';
 
 import App from './components/app/app.jsx';
+
 import offers from './mock/offers.js';
+import cities from './mock/cities';
+
 import {reducer} from './reducer.js';
 
 
@@ -17,6 +20,7 @@ ReactDom.render(
     <Provider store={store}>
       <App
         offers={offers}
+        cities={cities}
       />
     </Provider>,
 
